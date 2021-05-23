@@ -1,5 +1,7 @@
 #include "DXUT.h"
 #include "stdafx.h"
+#include "Camera.h"
+#include "Transform.h"
 
 Camera::Camera()
 {

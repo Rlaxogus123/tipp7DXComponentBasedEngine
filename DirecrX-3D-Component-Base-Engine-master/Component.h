@@ -1,7 +1,8 @@
 #pragma once
-class GameObject;
-class Transform;
+#include "stdafx.h"
 
+class Transform;
+class GameObject;
 class Component :
 	public Base
 {

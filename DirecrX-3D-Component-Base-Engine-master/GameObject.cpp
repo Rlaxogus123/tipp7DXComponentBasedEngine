@@ -1,5 +1,6 @@
 #include "DXUT.h"
 #include "stdafx.h"
+#include "GameObject.h"
 
 GameObject::GameObject()
 {

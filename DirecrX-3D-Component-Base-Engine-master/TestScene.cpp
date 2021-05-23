@@ -1,6 +1,18 @@
 #include "DXUT.h"
 #include "stdafx.h"
 
+#include "GameObject.h"
+#include "Component.h"
+#include "Camera.h"
+#include "Light.h"
+#include "MeshRenderer.h"
+#include "Instance.h"
+
+#include "TestScene.h"
+#include "SceneManager.h"
+
+#include "MyMath.h"
+
 void TestScene::Init()
 {
 	camera = new GameObject();

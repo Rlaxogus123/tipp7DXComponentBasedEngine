@@ -1,5 +1,7 @@
 #include "DXUT.h"
 #include "stdafx.h"
+#include "MeshRenderer.h"
+#include "Transform.h"
 
 MeshRenderer::MeshRenderer()
 {

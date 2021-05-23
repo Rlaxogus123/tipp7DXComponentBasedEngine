@@ -1,12 +1,5 @@
 #pragma once
 
-class Instance
-{
-public:
-	Instance();
-	~Instance();
-};
-
 class Time
 {
 public:

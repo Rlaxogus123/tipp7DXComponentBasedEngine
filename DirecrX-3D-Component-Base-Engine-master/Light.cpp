@@ -1,5 +1,7 @@
 #include "DXUT.h"
 #include "stdafx.h"
+#include "Light.h"
+#include "Transform.h"
 
 Light::Light()
 {

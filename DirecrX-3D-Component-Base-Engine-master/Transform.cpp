@@ -1,5 +1,7 @@
 #include "DXUT.h"
 #include "stdafx.h"
+#include "Transform.h"
+
 void Transform::Update()
 {
 	worldTOMatrix = GetWorldMatrix(position, rotation, scale);

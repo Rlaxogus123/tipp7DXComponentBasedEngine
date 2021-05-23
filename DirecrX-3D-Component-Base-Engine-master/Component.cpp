@@ -1,5 +1,6 @@
 #include "DXUT.h"
-#include "stdafx.h"
+#include "Component.h"
+#include "GameObject.h"
 
 GameObject* Component::gameObject()
 {
@@ -15,7 +16,6 @@ void Component::SetTransform(GameObject& obj)
 
 void Component::Init()
 {
-
 }
 
 void Component::Update()

@@ -1,5 +1,6 @@
 #pragma once
 #include "Scene.h"
+
 class CatScene :
 	public Scene
 {

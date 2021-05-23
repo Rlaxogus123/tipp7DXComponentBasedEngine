@@ -1,5 +1,7 @@
 #include "DXUT.h"
 #include "stdafx.h"
+#include "Terrain.h"
+#include "Transform.h"
 
 Terrain::Terrain()
 {

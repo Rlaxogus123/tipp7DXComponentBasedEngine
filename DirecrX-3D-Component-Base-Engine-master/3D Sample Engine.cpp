@@ -6,6 +6,11 @@
 #include "DXUT.h"
 #include "resource.h"
 #include "stdafx.h"
+#include "Instance.h"
+
+#include "TestScene.h"
+#include "CatScene.h"
+#include "SceneManager.h"
 
 //--------------------------------------------------------------------------------------
 // Rejects any D3D9 devices that aren't acceptable to the app by returning false

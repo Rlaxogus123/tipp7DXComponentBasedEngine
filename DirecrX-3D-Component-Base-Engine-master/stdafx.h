@@ -22,7 +22,7 @@ int Safe_Release(T& obj)
     DWORD refCount = 0;
     if (obj != NULL)
     {
-        refCount = obj->Release(); // Base->Release() 호출
+        refCount = obj->Release(); // T->Release() 호출
         if (refCount == 0)
             obj = NULL;
     }
@@ -57,6 +57,8 @@ typedef D3DXMATRIX MATRIX;
 #define SCW 1280
 #define SCH 720
 
+using namespace std;
+
 #include <stdio.h>
 #include <iostream>
 #include <algorithm>
@@ -65,21 +67,4 @@ typedef D3DXMATRIX MATRIX;
 #include <string>
 #include <map>
 
-using namespace std;
-
 #include "Base.h"
-
-#include "Component.h"
-#include "Transform.h"
-#include "Camera.h"
-#include "Light.h"
-#include "MeshRenderer.h"
-#include "Terrain.h"
-#include "GameObject.h"
-
-#include "Scene.h"
-#include "TestScene.h"
-#include "CatScene.h"
-
-#include "Instance.h"
-#include "SceneManager.h"

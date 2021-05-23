@@ -1,5 +1,16 @@
 #include "DXUT.h"
 #include "stdafx.h"
+
+#include "GameObject.h"
+#include "Component.h"
+#include "Camera.h"
+#include "Light.h"
+#include "MeshRenderer.h"
+#include "Instance.h"
+
+#include "CatScene.h"
+#include "SceneManager.h"
+
 #include "MyMath.h"
 
 void CatScene::Init()
@@ -37,18 +48,18 @@ void CatScene::Update()
 	Scene::Update();
 
 	amount += Time::detaTime;
-	//myD3DXVec3CatmullRom(&object->transform->position,
-	//	point[0]->transform->position,
-	//	point[1]->transform->position,
-	//	point[2]->transform->position,
-	//	point[3]->transform->position,
-	//	amount);
-	D3DXVec3CatmullRom(&object->transform->position,
-	&point[0]->transform->position,
-	&point[1]->transform->position,
-	&point[2]->transform->position,
-	&point[3]->transform->position,
-	amount);
+	MyMath::myD3DXVec3CatmullRom(&object->transform->position,
+		point[0]->transform->position,
+		point[1]->transform->position,
+		point[2]->transform->position,
+		point[3]->transform->position,
+		amount);
+	//D3DXVec3CatmullRom(&object->transform->position,
+	//&point[0]->transform->position,
+	//&point[1]->transform->position,
+	//&point[2]->transform->position,
+	//&point[3]->transform->position,
+	//amount);
 	if (amount >= 2) amount = -1;
 
 	if (DXUTWasKeyPressed('P'))

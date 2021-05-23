@@ -1,5 +1,5 @@
 #include "DXUT.h"
-#include "stdafx.h"
+#include "SceneManager.h"
 
 void SceneManager::AddScene(wstring _name, Scene* _scene)
 {
