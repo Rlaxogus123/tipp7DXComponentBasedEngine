@@ -1,0 +1,85 @@
+#pragma once
+template<class T>
+class Singleton
+{
+    static T* _Singleton;
+public:
+    static T* GetInstance()
+    {
+        if (nullptr == _Singleton)
+        {
+            _Singleton = new T;
+        }
+        return _Singleton;
+    }
+};
+
+template<class T> T* Singleton<T>::_Singleton = nullptr;
+
+template<typename T>
+int Safe_Release(T& obj)
+{
+    DWORD refCount = 0;
+    if (obj != NULL)
+    {
+        refCount = obj->Release(); // Base->Release() È£Ãâ
+        if (refCount == 0)
+            obj = NULL;
+    }
+    return refCount;
+}
+
+struct CUSTOMVERTEX
+{
+	D3DXVECTOR3 p;
+	D3DXVECTOR3 n; // ¼öÁ÷º¤ÅÍ ( ºû )
+	D3DXVECTOR3 t; // Áö¸é ÅØ½ºÃÄ ÁÂÇ¥
+};
+#define D3DFVF_CUSTOMVERTEX ( D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_DIFFUSE )
+
+struct GROUNDVERTEX
+{
+	D3DXVECTOR3 position;
+	D3DXVECTOR3 normal;
+	DWORD Diffuse;
+};
+
+#define D3DFVF_GROUNDVERTEX ( D3DFVF_XYZ |  D3DFVF_NORMAL | D3DFVF_DIFFUSE )
+
+struct MYINDEX {
+	WORD _0, _1, _2; // WORD 16ºñÆ® ÀÎµ¦½º
+};
+
+typedef D3DXVECTOR3 Vector3;
+typedef D3DXVECTOR2 Vector2;
+typedef D3DXMATRIX MATRIX;
+
+#define SCW 1280
+#define SCH 720
+
+#include <stdio.h>
+#include <iostream>
+#include <algorithm>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <map>
+
+using namespace std;
+
+#include "Base.h"
+
+#include "Component.h"
+#include "Transform.h"
+#include "Camera.h"
+#include "Light.h"
+#include "MeshRenderer.h"
+#include "Terrain.h"
+#include "GameObject.h"
+
+#include "Scene.h"
+#include "TestScene.h"
+#include "CatScene.h"
+
+#include "Instance.h"
+#include "SceneManager.h"
